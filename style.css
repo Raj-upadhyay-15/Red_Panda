@@ -1,0 +1,777 @@
+@font-face {
+    font-family: drukm;
+    src: url(./Druk_Wide-Medium-Web.ttf);
+}
+
+@font-face {
+    font-family: druks;
+    src: url(./Druk_Wide-Super-Web.ttf);
+}
+
+@font-face {
+    font-family: drukh;
+    src: url(./DrukWideCyWeb-Heavy.ttf);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+    cursor: none;
+}
+
+#main{
+    overflow-x: hidden;
+}
+
+.cursor-dot{
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    mix-blend-mode: difference;
+}
+
+.cursor-outline{
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+    mix-blend-mode: difference;
+}
+
+.cursor-dot,.cursor-outline{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+#page1{
+    min-height: 150vh;
+    width: 100%;
+    background-color: #C00000;
+    position: relative;
+}
+
+#page1 #nav{
+    height: 100px;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+#nav svg{
+    scale: 0.4;
+    margin-left: -3%;
+}
+
+#nav h2{
+    margin-right: 5%;
+    margin-top: 2%;
+    font-size: 27px;
+    font-family: sf pro display;
+    font-weight: 900;
+}
+
+#nav span{
+    font-weight: 400;
+}
+
+#page1 #svg{
+    scale: 0.025;
+    margin-top: -46%;
+}
+
+#page1 h1{
+    margin-top: -50%;
+    font-size: 280px;
+    font-family: drukh;
+    margin-left: -1%;
+}
+
+#page1 img{
+    scale: 0.9;
+    margin-top: -17%;
+}
+
+#page1 #black{
+    width: 100%;
+    height: 20vh;
+    background-color: #000;
+    bottom: 0px;
+    position: absolute;
+}
+
+#page1 #img2{
+    margin-top: -26%;
+    scale: 1.01;
+}
+
+#page1 h3{
+    position: absolute;
+    color: red;
+    top: 72%;
+    font-size: 150px;
+    transform: rotate(-4deg);
+    left: 36px;
+}
+
+#page1 h5{
+    font-family: sf pro display;
+    text-align: center;
+    margin-left: -85%;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: -2%;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+#page1 h6{
+    font-family: sf pro display;
+    text-align: center;
+    margin-left: 85%;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: -2%;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+#page1 h4{
+    font-size: 40px;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 44%;
+}
+
+#page1 #h4{
+    font-size: 40px;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 44%;
+    right: 1%;
+}
+
+#page2{
+    min-height: 135vh;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    padding-top: 0.1px;
+}
+
+#page2 img{
+    position: absolute;
+    height: 65%;
+    top: 15%;
+    left: 5%;
+}
+
+#page2 h1{
+    color: #C00000;
+    font-family: drukm;
+    position: absolute;
+    font-size: 80px;
+    top: 67%;
+    left: 30%;
+}
+
+#page2 h1::after{
+    content: "but feisty";
+    position: absolute;
+    top: 70%;
+    left: -40%;
+}
+
+#page2 p{
+    color: #911111;
+    font-family: sf pro display;
+    position: absolute;
+    bottom: 8.5%;
+    left: 43%;
+    text-align: right;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 23px;
+}
+
+#page2 p::after{
+    position: absolute;
+    content: "away.";
+    top: 95%;
+    left: 1%;
+}
+
+#page2 h6{
+    position: absolute;
+    color:#911111;
+    font-family: sf pro display;
+    font-weight: 400;
+    font-size: 17px;
+    right: 5%;
+}
+
+#page2 h2{
+    position: absolute;
+    color: #C00000;
+    font-size: 40px;
+    right: 1.2%;
+    top: 10%;
+    transform: rotate(90deg);
+}
+
+#page2 h3{
+    position: absolute;
+    color: #C00000;
+    font-size: 80px;
+    right: 10%;
+    top: 30%;
+    font-family: drukm;
+    font-weight: 400;
+}
+
+#page2 h3::after{
+    content:"hi";
+    color: #C00000;
+    position: absolute;
+    bottom: 50%;
+    left: -.01px;
+}
+
+#page2 #fst{
+    position: absolute;
+    top: 40%;
+    right: 26%;
+}
+
+#page2 #fst::after{
+    content: "They used to call me even worse.";
+    position: absolute;
+    top: 9%;
+    right: 24%;
+}
+
+#box1{
+    position: absolute;
+    background-color: #C00000;
+    font-family: drukm;
+    padding: 10px 20px;
+    font-size: 45px;
+    top: 27%;
+    transform: rotate(35deg);
+    left: 25%;
+}
+
+
+#box2{
+    position: absolute;
+    background-color: #C00000;
+    font-family: drukm;
+    padding: 10px 20px;
+    font-size: 45px;
+    top: 40%;
+    transform: rotate(20deg);
+    left: 26%;
+}
+
+
+#box3{
+    position: absolute;
+    background-color: #C00000;
+    font-family: drukm;
+    padding: 10px 20px;
+    font-size: 45px;
+    left: 33%;
+    top: 30%;
+}
+
+
+#box4{
+    position: absolute;
+    background-color: #C00000;
+    font-family: drukm;
+    padding: 10px 20px;
+    font-size: 45px;
+    top: 60%;
+    right: -10%;
+}
+
+#page3{
+    min-height: 200vh;
+    width: 100%;
+    position: relative;
+    background-color: #000;
+}
+
+#page3 h1{
+    color: #C00000;
+    transform:rotate(90deg) ;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+#page3 h5{
+    color: #911111;
+    font-family: sf pro display;
+    position: absolute;
+    top: 13%;
+    left: 8%;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+#page3 h5::before{
+    content:"a dexterious guy";
+    position: absolute;
+    left: -30px;
+    top: 20px;
+    width: 200%;
+    /* background: #e7bcbc; */
+}
+
+#page3 img{
+    transform: rotate(17deg);
+    /* height: 10%; */
+    margin-top: 10%;
+    scale: 0.9;
+    margin-left: -5%;
+}
+
+#page3 h2{
+    color:#C00000;
+    font-family: drukm;
+    position: absolute;
+    top: 16%;
+    font-size: 30px;
+    left: 28%;
+    letter-spacing: 1px;
+}
+
+#page3 h2::after{
+    position: absolute;
+    content: "height";
+    font-family: sf pro display;
+    top: -30px;
+    left: 30%;
+    font-size:25px ;
+    font-weight: 400;
+}
+
+#page3 h3{
+    color:#C00000;
+    font-family: drukm;
+    position: absolute;
+    top: 13%;
+    font-size: 30px;
+    left: 53%;
+    letter-spacing: 1px;
+}
+
+#page3 h3::after{
+    position: absolute;
+    content: "weight";
+    font-family: sf pro display;
+    top: -30px;
+    left: 30%;
+    font-size:25px ;
+    font-weight: 400;
+}
+
+#page3 h4{
+    color:#C00000;
+    font-family: drukm;
+    position: absolute;
+    top: 18%;
+    font-size: 30px;
+    left: 83%;
+    letter-spacing: 1px;
+}
+
+#page3 h4::after{
+    position: absolute;
+    content: "tail";
+    font-family: sf pro display;
+    top: -30px;
+    left: 40%;
+    font-size:25px ;
+    font-weight: 400;
+}
+
+#page3 h6{
+    font-size: 125px;
+    position: absolute;
+    transform: rotate(90deg);
+    left: 22%;
+    top: 65%;
+}
+
+#page3 #img2{
+    position: absolute;
+    height: 50%;
+    rotate: -10deg;
+    top: 40%;
+    left: -10%;
+}
+
+#page3 p{
+    color: #000;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    font-family: sf pro display;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+#fight{
+    position: absolute;
+    color: #000;
+    font-family: drukm;
+    top: 80%;
+    right: 10%;
+    font-size: 80px;
+}
+
+#fight-para{
+    position: absolute;
+    color: #000;
+    font-family: sf pro display;
+    top: 88%;
+    right: 10%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#page3 #he{
+    position: absolute;
+    left: 86%;
+    top: 58%;
+    color: #000;
+    font-size: 50px;
+    /* background-color: #000; */
+    /* height: 200%; */
+}
+
+#page3 p::after{
+    content: "are born , not made";
+    position: absolute;
+    top: 100%;
+    left: -10%;
+    width: 200%;
+}
+
+#page4{
+    height: 160vh;
+    width: 100%;
+    position: relative;
+    background-color:#C00000;
+}
+
+#page4 #tree{
+    position: absolute;
+}
+
+#page4 #bear{
+    position: absolute;
+    scale: 0.7;
+    top: -9%;
+    left: 30%;
+}
+
+#page4 #foot{
+    position: absolute;
+    scale: 0.7;
+    top: 23%;
+    left: 47%;
+}
+
+#page4 h2{
+    position: absolute;
+    top: 12%;
+    transform: rotate(90deg);
+    left: 5%;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+#page4 h6{
+    position: absolute;
+    top: 22%;
+    left: 7.5%;
+    font-family: sf pro display;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#page4 h1{
+    position: absolute;
+    color: #C00000;
+    font-size: 90px;
+    top: 68%;
+    left: 20%;
+    font-family: drukm;
+}
+
+#page4 h1::after{
+    position: absolute;
+    content:"on the trees";
+    top: 70%;
+    left: 20%;
+    width: 200%;
+}
+
+#page4 p{
+    position: absolute;
+    color: #911111;
+    top: 83%;
+    left:55%;
+    font-size: 20px;
+    text-align: right;
+    font-family: sf pro display;
+}
+
+#page4 p::after{
+    content: "comfy and safe there.";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+
+#btm-ped{
+    position: absolute;
+    bottom: 0px;
+}
+
+#bhalu{
+    position: absolute;
+    height: 90%;
+    top: -15%;
+    left: 5%;
+}
+
+#erl{
+    position: absolute;
+    height: 10%;
+    top: -14%;
+    left: 27%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#err{
+    position: absolute;
+    height: 13%;
+    top: -17%;
+    left: 41.2%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#page5 h1{
+    color: #C00000;
+    font-family: drukm;
+    font-size: 80px;
+    position: absolute;
+    text-align: center;
+    right: 10%;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+#page5 h2{
+    position: absolute;
+    color: #C00000;
+    font-size: 140px;
+    top: 52%;
+    rotate: -3deg;
+    left: 5%;
+}
+ 
+
+#page6{
+    min-height: 130vh;
+    width: 100%;
+    background-color: black;
+    position: relative;
+}
+
+#page6 img{
+    position: absolute;
+    height: 89%;
+    right: -50%;
+    top: 10%;
+}
+
+#page6 h1{
+    color: #C00000;
+    font-family: drukm;
+    position: absolute;
+    font-size: 90px;
+    top: 10%;
+    left: 30%;
+    font-weight: 100;
+}
+
+#page6 h1::after{
+    position: absolute;
+    content:"face";
+    top: 70%;
+    left: -40%;
+}
+
+#page6 p{
+    position: absolute;
+    color: #911111;
+    font-family: sf pro display;
+    top: 30%;
+    left: 21%;
+    font-size: 20px;
+}
+
+#page6 p::after{
+    position: absolute;
+    content: "mask pattern, you won't find any identical.This camouflage is cool in the animal world. Moreover, it looks classy, whatever you say.";
+    width: 170%;
+    top: 100%;
+    left: -50%;
+    color: #911111;
+}
+
+#page6 #div1{
+    position: absolute;
+    background-color: #C00000;
+    color: #000;
+    font-size: 40px;
+    font-family: drukm;
+    padding: 13px 20px;
+    top: 50%;
+    rotate: 20deg;
+    left: 10%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#page6 #div2{
+    position: absolute;
+    background-color: #C00000;
+    color: #000;
+    font-size: 40px;
+    font-family: drukm;
+    padding: 13px 20px;
+    top: 60%;
+    rotate: -20deg;
+    left: 30%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#page6 #div3{
+    position: absolute;
+    background-color: #C00000;
+    color: #000;
+    font-size: 40px;
+    font-family: drukm;
+    padding: 13px 20px;
+    top: 75%;
+    rotate: 10deg;
+    left: 40%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#page6 #div4{
+    position: absolute;
+    background-color: #C00000;
+    color: #000;
+    font-size: 40px;
+    font-family: drukm;
+    padding: 13px 20px;
+    top: 70%;
+    rotate: -10deg;
+    left: -6%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#page6 #div5{
+    position: absolute;
+    background-color: #C00000;
+    color: #000;
+    font-size: 40px;
+    font-family: drukm;
+    padding: 13px 20px;
+    top: 76%;
+    rotate: -10deg;
+    left: 20%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#page6 #div6{
+    position: absolute;
+    background-color: #C00000;
+    color: #000;
+    font-size: 40px;
+    font-family: drukm;
+    padding: 13px 20px;
+    top: 85%;
+    rotate: 20deg;
+    left: 6%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+#page6 #div7{
+    position: absolute;
+    background-color: #C00000;
+    color: #000;
+    font-size: 40px;
+    font-family: drukm;
+    padding: 13px 20px;
+    top: 87%;
+    rotate: -30deg;
+    left: 28%;
+    animation: shake 0.4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-2deg); }
+    20% { transform: translate(-3px, 0px) rotate(3deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(3deg); }
+    50% { transform: translate(-1px, 2px) rotate(-3deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-3deg); }
+    80% { transform: translate(-1px, -1px) rotate(3deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-3deg); }
+  }
+ 
